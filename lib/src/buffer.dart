@@ -31,6 +31,8 @@ class Buffer {
     _data = ByteData.view(_list.buffer);
   }
 
+int get remaining => _data.lengthInBytes - _readPos;
+
   /// Creates a [Buffer] with the given [list] as backing storage
   Buffer.fromList(List<int> list)
       : _list = Uint8List(list.length),

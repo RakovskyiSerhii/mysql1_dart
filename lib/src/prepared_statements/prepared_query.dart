@@ -20,5 +20,5 @@ class PreparedQuery {
         parameterCount = handler.parameters?.length ?? 0,
         columns = List.from(
             handler.columns?.where((element) => element != null) ?? <Field>[]),
-        statementHandlerId = handler.okPacket.statementHandlerId;
+        statementHandlerId = handler.okPacket.statementId;
 }
